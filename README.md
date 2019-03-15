@@ -81,4 +81,11 @@ If any of the command results in `command not found` or anything similar, please
 - 02 [Source Control Management](/modules/02-git.md)
 
 ### Getting on Web Development
-- 03 [Boostrap Basics](03-bootstrap-basics.md)
+- 03 [Boostrap Basics](/modules/03-bootstrap-basics.md)
+- 04 [PHP Basics](/modules/04-php-basics.md)
+- 05 [Refactoring to PHP](/modules/05-refactoring-to-php.md)
+- 05.1 [Redirecting to index.php](/modules/05.1-rewrite-engine.md)
+- 06 [OOP in PHP](/modules/06-oop.md)
+- 07 [Composer & PSR 4](/modules/07-composer-and-psr-4.md)
+- 08 [Refactoring to using Blade](/modules/08-composer-and-psr-4.md)
+- 09 [SQL Basics & Intro to PDO](/modules/09-pdo.md)
