@@ -76,5 +76,9 @@ If any of the command results in `command not found` or anything similar, please
 
 ## The Workshop Contents:
 
+### The fundamentals
 - 01 [Your First Web Page Published](/modules/01-first-web-page.md)
 - 02 [Source Control Management](/modules/02-git.md)
+
+### Getting on Web Development
+- 03 [Boostrap Basics](03-bootstrap-basics.md)
