@@ -76,4 +76,5 @@ If any of the command results in `command not found` or anything similar, please
 
 ## The Workshop Contents:
 
-- 01 [Your First Web Page Deployed on a Free Host](/modules/01-first-web-page)
+- 01 [Your First Web Page Published](/modules/01-first-web-page.md)
+- 02 [Source Control Management](/modules/02-git.md)
