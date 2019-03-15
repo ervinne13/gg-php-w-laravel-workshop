@@ -34,7 +34,7 @@ Steps
     - skill.phtml
     - referrals.phtml
     - referral.phtml
-    - contact-form.phtml
+    - contact_form.phtml
 
 Follow along the instructor as he dissect our webpage, for your reference, the following should be the content of each files and should also be the output of what the instructor does.
 
@@ -277,7 +277,7 @@ File `src/views/profile/referrals.phtml`
 </div>
 ```
 
-File `src/views/profile/contact-form.phtml`
+File `src/views/profile/contact_form.phtml`
 ```html
 <div class="text-center">
     <h1>Contact Me</h1>
@@ -337,7 +337,7 @@ File: `src/views/profile/index.phtml`
             </div>
 
             <div class="light-grey-bg p-5">
-                <?= view('profile.contact-form') ?>
+                <?= view('profile.contact_form') ?>
             </div>
         </div>
 
@@ -405,3 +405,78 @@ echo "You have searched for $search_html.\n";
 #### Applying Post Requests to The Form
 
 Before we'd be able to, we'll need to enable routing first.
+
+__Enabling Routes and Routing /contact (POST)__
+
+Update file `index.php`:
+```php
+<?php
+
+const LOCAL_PATH = __DIR__ . '/';
+
+//  Bootstrap our functions
+require_once(LOCAL_PATH . 'src/helpers/string_helper_functions.php');
+require_once(LOCAL_PATH . 'src/helpers/url_helper_functions.php');
+require_once(LOCAL_PATH . 'src/helpers/view_loader_functions.php');
+
+$route = get_request_route();
+switch($route) {
+    case '/':
+        view('profile.index', [
+            'name' => 'Ervinne'
+        ]);
+        break;
+    case '/contact':
+        if (is_request_method('POST')) {
+            echo 'will be handled';
+        }
+        break;
+    default:
+        // throw new \Exception("Unhandled route {$route}");
+}
+```
+
+Update the string helper functions to add a `starts_with` method that checks if a string (subject) starts with another string:
+
+Add function to file `src/helpers/string_helper_functions.php`:
+```php
+function starts_with($subject, $testStartsWith) {
+    return substr( $subject, 0, strlen($testStartsWith) ) === $testStartsWith;
+}
+```
+
+Add new helper `src/helpers/url_helper_functions.php`
+```php
+<?php
+
+function get_request_route() {
+    $url = trim($_SERVER['REQUEST_URI']);
+    if (!starts_with($url, '/')) {
+        $url = '/' . $url;
+    }
+    
+    return $url;
+}
+
+function is_request_method($assertMethod) {
+    return strtoupper(get_request_method()) === $assertMethod;
+}
+
+function get_request_method() {
+    return $_SERVER['REQUEST_METHOD'];
+}
+```
+
+Finally, update our form `src/helpers/contact_form.phtml` and change:
+
+```php
+<form>
+```
+
+to
+
+```php
+<form action="/contact" method="POST">
+```
+
+For now, let's leave it as is until we're ready to implement controllers as classes which we'll do in the next modules. Before that though, we'll need to learn basic `Object Oriented Programming`.
