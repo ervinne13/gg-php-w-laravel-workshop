@@ -324,7 +324,7 @@ git merge --no-ff feature-main-and-sub-webpages
 git push origin develop
 ```
 
-Note: when merging, git may ask you for comments. Git will likely open up a `Vim` editor. Do the usual, you can opt to not provide comments and just do `ESC` then type `:q` then press `Enter` or write a comment then do `:wq` instead of of `:q`
+Note: when merging, git may ask you for comments. Git will likely open up a `Vim` editor. Do the usual, you can opt to not provide comments and just do `ESC` then type `:q` then press `Enter` or write a comment then do `:wq` instead of of `:q`.
 
 That's it! Now your changes can be retrieved by your teammates by `pulling`:
 
