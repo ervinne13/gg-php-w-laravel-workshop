@@ -228,4 +228,156 @@ git push origin develop
 
 Check git and you should see that you now have 3 branches.
 
+### The 3 Branches
+
+__Develop branch__ is the branch where you and your teammates first should merge your work. This is where you update your team and get updates from them.
+
+__Staging/QA branch__ is the branch where you push changes that are ready for testing.
+
+__Master branch__ should only contain stable code. Meaning tested and working code. This is the branch that's normally promoted to production.
+
 ## Feature Branches and Merging
+
+Your workflow when you're working with other people in a team is that whenever you work on a feature, you create a `feature branch`.
+
+Feature branches are branches from the `develop` branch that are specific to a feature or fix you are working on.
+
+After finishing your work on your branch, you then `merge` your branch on develop.
+
+### Activity
+
+Practice creating feature branches that you merge to the `develop` branch.
+
+Let's work on a feature that adds a main and sub webpage to our repository.
+
+#### Doing changes on a branch
+
+```bash
+git checkout -b feature-main-and-sub-webpages
+```
+
+Create some files a main webpage that will link to a sub page we'll do later.
+
+File `index.html`
+```bash
+<html>
+    <head>
+        <title>Main Webpage | My Webpage</title>
+    </head>
+    <body>
+        <h1>This is the main webpage</h2>
+        <a href="/sub.html">Click to navigate to sub</a>
+    </body>
+</html>
+```
+
+Commit your change:
+
+```bash
+git status
+git add .
+git status
+git commit -m "Add main webpage that links to a sub page"
+git status
+```
+
+Tip: before and after a git command, do a `git status` to monitor what happens to the repository and develop a habit of it.
+
+File `sub.html`
+
+```bash
+<html>
+    <head>
+        <title>Sub Webpage | My Webpage</title>
+    </head>
+    <body>
+        <h1>This is the sub webpage</h2>    
+    </body>
+</html>
+```
+
+Commit your change:
+
+```bash
+git status
+git add .
+git status
+git commit -m "Add subpage"
+git status
+```
+
+After locally testing your updates, we're now ready to add our feature branch.
+
+```bash
+git status
+git push origin feature-main-and-sub-webpages
+```
+
+#### Merging the feature branch to develop
+
+Let's merge with the option `--no-ff` meaning no fast forward. Fast forwarding in git will result in loss of our commits as they are summarized in a merge. We usually want to keep the logs of our changes so let's use `--no-ff`.
+
+```bash
+git status
+git checkout develop
+git merge --no-ff feature-main-and-sub-webpages
+git push origin develop
+```
+
+That's it! Now your changes can be retrieved by your teammates by `pulling`:
+
+```bash
+git pull origin develop
+```
+
+#### Promoting Changes to Staging/QA Branch
+
+```bash
+git status
+git checkout qa
+git merge merge develop
+git push origin qa
+```
+
+Notice that here, we don't have to do a `--no-ff`. We can just check for the commits in the develop. We don't have to do that in other branches.
+
+#### On Your Own
+
+Activity (Quick): Assume that the QA team is finished validating your work and gives a go signal to promote to production. The first thing you do is merge qa with master.
+
+Normally you don't do this manually, but instead merge in the web (github in our case).
+
+#### Pull Requests
+
+Just a quick discussion, but in some cases, you don't have access to merge to develop. The team can have a policy for you to create `pull requests` instead.
+
+With `pull requests`, your team can create a system where all changes to be merged to develop is reviewed by everyone first (or by pairs in `pair programming`).
+
+With `pull requests`, you can also set to have your feature branches deleted automatically when your request is updated. (You'll have to manually do this otherwise.)
+
+#### Cloning Repositories
+
+To get an already existing repository, you simply `clone` the repository locally by:
+
+```bash
+git clone http://github.com/your-repository.git
+```
+
+Replace 'http://github.com/your-repository' with the actual repository link
+
+### Test Yourselves
+
+#### Activity:
+
+Steps:
+1. Find a partner (or a team of 3)
+2. Have someone create a repository
+3. Create the 3 main branches `develop`, and `qa` (`master` is already there by default)
+4. The team members will then clone the repository and work on it.
+5. Work on your own HTML files that display your names in it, it's up to you how to display in mark up. The rule is that you must create your own feature branches.
+6. Once you're done, merge and push your changes to `develop`
+7. Have someone in the team create an `index.html` file that has links to all your pages using the `<a>` tag. This will be pushed to develop as well, test your updates.
+8. After locally testing, push your changes to the `qa` branch.
+9. Once you're done testing, give the link to the repository to your neighbor group and vice versa.
+10. Run locally the `qa` branch and test the other group's work. Once validated, give them an "OK" signal to push.
+11. Once the other group gives an "OK", promote your changes to `master` branch.
