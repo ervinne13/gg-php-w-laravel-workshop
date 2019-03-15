@@ -87,5 +87,5 @@ If any of the command results in `command not found` or anything similar, please
 - 05.1 [Redirecting to index.php](/modules/05.1-rewrite-engine.md)
 - 06 [OOP in PHP](/modules/06-oop.md)
 - 07 [Composer & PSR 4](/modules/07-composer-and-psr-4.md)
-- 08 [Refactoring to using Blade](/modules/08-composer-and-psr-4.md)
+- 08 [Refactoring to using Blade](/modules/08-refactoring-to-blade-and-psr-4.md)
 - 09 [SQL Basics & Intro to PDO](/modules/09-pdo.md)
