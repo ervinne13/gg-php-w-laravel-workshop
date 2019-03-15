@@ -401,3 +401,7 @@ echo "You have searched for $search_html.\n";
 //  Outputs: 
 //  You have searched for Me &#38; son.
 ```
+
+#### Applying Post Requests to The Form
+
+Before we'd be able to, we'll need to enable routing first.
