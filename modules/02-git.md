@@ -135,6 +135,9 @@ __Git Commit Best Practices__
 
 - Your commits should sound like you are commanding something.
 - If your commit message is long, use `git commit` only and write one sentence (still a command) as the header, separate by new line and add details.
+- We're not able to demonstrate it but ideally, our commit messages should explain the purpose of the changes that occured instead of what. Examples:
+    - Remove dead links from readme.md file
+    - Enable new links in etc. etc.
 
 Example 
 

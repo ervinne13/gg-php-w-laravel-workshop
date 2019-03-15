@@ -61,13 +61,13 @@ view('profile.index');
 
 ```
 RewriteEngine On
-RewriteCode %(REQUEST_FILENAME) !-f
-RewriteCode %(REQUEST_FILENAME) !-d
-RewriteCode %(REQUEST_FILENAME) !-l
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteCond %(REQUEST_FILENAME) !-l
 RewriteRule ^ index.php [QSA,L]
 ```
 
-The instructor will explain this line by line, to follow along, see [Rewriting URLs](/learning-modules/03.1-rewriting-urls.md)
+The instructor will explain this line by line, to follow along, see [Rewriting URLs](/learning-modules/05.1-rewrite-engine.md)
 
 ### Helper Contents
 
