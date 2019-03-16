@@ -303,8 +303,8 @@ File `src/views/profile/contact_form.phtml`
             </select>
         </div>
         <div class="form-group">
-            <label for="purpose">Message</label>
-            <textarea class="form-control" name="purpose"></textarea>
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message"></textarea>
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -432,7 +432,7 @@ switch($route) {
         }
         break;
     default:
-        // throw new \Exception("Unhandled route {$route}");
+        throw new \Exception("Unhandled route {$route}");
 }
 ```
 
