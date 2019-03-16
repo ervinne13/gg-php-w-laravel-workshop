@@ -68,11 +68,11 @@ git config git-ftp.password "<Your password here>"
 To upload all files:
 
 ```bash
-git ftp init
+git-ftp init
 ```
 
 When updating the server:
 
 ```bash
-git ftp upload
+git-ftp upload
 ```
