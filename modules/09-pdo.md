@@ -100,6 +100,21 @@ switch($route) {
 
 ```
 
+## PDO Prepared Statements
+
+We'll use prepared statements to properly manage our queries and add an extra layer of security as PDO sanitizes our inputs by default:
+
+The full documentation of PDO Prepared Statements can be found [here](http://php.net/manual/en/pdo.prepare.php).
+
+What we're interested in most is using `named` parameters.
+
+An example syntax would be something like this:
+```php
+$connection->prepare("INSERT INTO contact_requests (`email`, `name`, `purpose_code`, `message`) VALUES (:email,:name,:purpose,:message)");
+```
+
+Follow along the instructor as he discusses about it.
+
 ## Using MySQL with our form
 
 Let's first create a module that will contain the `store contact request command`.
@@ -138,8 +153,7 @@ class StoreContactRequestCommand
         $host = $this->connection['host'];
         $name = $this->connection['name'];
         $dsn = "mysql:host={$host};dbname={$name};charset=UTF8";
-        $options = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        $options = [            
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => false,
         ];
