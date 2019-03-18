@@ -91,9 +91,12 @@ If any of the command results in `command not found` or anything similar, please
 
 ### General Software Development Concepts
 
-- 09 [SOLID Principles](/modules/09-solid.md)
-- 10 [Introduction to Design Patterns](/modules/10-intro-to-dp.md)
+//  TODO: add article about class design: designing classes over what they are vs designing classes vs what they do, - composition over inheritance
+
+- 09 [Law of Demeter](/modules/09-lod.md)
+- 10 [SOLID Principles](/modules/10-solid.md)
+- 11 [Introduction to Design Patterns](/modules/10-intro-to-dp.md)
 
 ### Introduction to Laravel
 
-- 10 [Laravel Intro: Analyzing Laravel's Design](/modules/09-09-analyzing-laravel-design.md)
+- 12 [Laravel Intro: Analyzing Laravel's Design](/modules/12-analyzing-laravel-design.md)
