@@ -88,3 +88,7 @@ If any of the command results in `command not found` or anything similar, please
 - 06 [OOP in PHP](/modules/06-oop.md)
 - 07 [Composer & PSR 4](/modules/07-composer-and-psr-4.md)
 - 08 [SQL Basics & Intro to PDO](/modules/09-pdo.md)
+
+### Introduction to Laravel
+
+- 09 [Laravel Intro](/modules/09-laravel-intro.md)
