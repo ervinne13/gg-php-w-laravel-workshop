@@ -87,8 +87,13 @@ If any of the command results in `command not found` or anything similar, please
 - 05.1 [Redirecting to index.php](/modules/05.1-rewrite-engine.md)
 - 06 [OOP in PHP](/modules/06-oop.md)
 - 07 [Composer & PSR 4](/modules/07-composer-and-psr-4.md)
-- 08 [SQL Basics & Intro to PDO](/modules/09-pdo.md)
+- 08 [SQL Basics & Intro to PDO](/modules/08-pdo.md)
+
+### General Software Development Concepts
+
+- 09 [SOLID Principles](/modules/09-solid.md)
+- 10 [Introduction to Design Patterns](/modules/10-intro-to-dp.md)
 
 ### Introduction to Laravel
 
-- 09 [Laravel Intro](/modules/09-laravel-intro.md)
+- 10 [Laravel Intro: Analyzing Laravel's Design](/modules/09-09-analyzing-laravel-design.md)
