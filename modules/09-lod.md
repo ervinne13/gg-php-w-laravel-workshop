@@ -1,6 +1,16 @@
 # The Law of Demeter
 
-LoD is an important guideline for developers to better implement [loose coupling](https://en.wikipedia.org/wiki/Loose_coupling). Let's first learn about coupling and decoupling before we move on to really exploring LoD.
+LoD is an important guideline for developers to better implement [loose coupling](https://en.wikipedia.org/wiki/Loose_coupling). 
+
+Law of demeter is also called the __principle of least knowledge__. It dictates that a dependency class should know very little about its dependency. By very little, we mean __just enough__ for the dependent object to do its job.
+
+The law(s) are as follows:
+
+- Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
+- Each unit should only talk to its friends; don't talk to strangers.
+- Only talk to your immediate friends.
+
+To better understand this, we'll discuss coupling and dependency injection to better implement the law of demeter, then go back to LoD to try make a better sense of it.
 
 ## Coupling
 
@@ -128,8 +138,6 @@ In our refactored version, we implemented here `Dependency Injection`.
 
 `Dependency Injection` is a very simple concept that lots of people like to over complicate. DI is merely passing in the dependencies to a dependent instead of letting it service locate. __As simple as that!__
 
-## The Law of Demeter (Finally Explained)
+## The Law of Demeter (Revisited)
 
-Now that we know the pre-requisites to learn LoD, let's discuss.
-
-//  TODO:
+Now that we know the pre-requisites to learn LoD, let's discuss more about it.
