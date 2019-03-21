@@ -5,7 +5,7 @@ Workshop for teaching PHP from fundamentals going to Laravel development.
 ## What You'll Need For This Workshop
 
 Downloadables:
-- Laragon [Download Here](https://laragon.org/download/index.html)
+- Laragon [Download Here](https://laragon.org   /download/index.html)
 - Composer [Download Here](https://getcomposer.org/download/)
 - Git [Download Here](https://git-scm.com/downloads)
 - NodeJS [Download Here](https://nodejs.org/en/download)
@@ -99,4 +99,20 @@ If any of the command results in `command not found` or anything similar, please
 
 ### Introduction to Laravel
 
-- 12 [Laravel Intro: Analyzing Laravel's Design](/modules/12-analyzing-laravel-design.md)
+- 12 [Analyzing Laravel's Design](/modules/12-analyzing-laravel-design.md)
+    - Pure & Simple Design
+    - Trying to make sense of Taylor Otwell and Jeffrey Way
+- 13 [Quick Walkthrough to the Framework Structure](13-framework-structure.md)
+
+### Breaking Down the Framework
+
+- 14 [Laravel's Custom Container (Modified Container Design Pattern)](/modules/14-laravel-container.md)
+- 15 [Laravel's Managers (Modified Strategy Design Pattern)](/modules/15-laravel-container.md)
+
+### Exploring the Laravel's Features
+
+- 15 [Ingraining TDD: Laravel's Feature & Unit Tests](/modules/14-laravel-container.md)
+- 16 [Routing & Controllers](/modules/16-routing-controllers.md)
+- 17 [Templating with Blade](/modules/17-blade.md)
+- 18 [Eloquent](/modules/18-eloquent.md)
+- 19 [Authentication Scaffolding](/modules/19-eloquent.md)

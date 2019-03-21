@@ -141,3 +141,79 @@ In our refactored version, we implemented here `Dependency Injection`.
 ## The Law of Demeter (Revisited)
 
 Now that we know the pre-requisites to learn LoD, let's discuss more about it.
+
+Law of Demeter simply dictates you to write code where the user of another class/service that you made knows only the __least minimum__ about that class/service.
+
+Consider the following example that does not follow the Law of Demeter:
+
+```php
+
+class ProductManagementService 
+{
+    public function getProductById($id) {/* ... */}
+
+    public function synchronizeProducts() {/* ... */}
+
+    public function loadProductsFromExtServer() {/* ... */}
+
+    //  about 8 more functions here
+}
+
+class Cart
+{
+    public function __construct(ProductManagementService $productManagementSrvc) 
+    {
+        $this->productManagementSrvc = $productManagementSrvc;
+    }
+
+    public function addProductById($id, $qty)
+    {
+        $product = $this->productManagementSrvc->getProductById($id);
+        //  ... some more code here
+    }
+}
+
+```
+
+Analyze this code and try to guess what's the problem with it. An obvious code smell is that 1: `ProductManagementService` is responsible for a lot of things that it may need to be dissected, but that's not what we're concerned with (for now let's leave it as is). But if we did try to dissect it and extract its functionalities, users of this class would have to change, lots of them. The reason is that __we did not follow the principle of least knowledge__ and let the `Cart` class depend on something large like `ProductManagementService` in the first place.
+
+We can resolve this without changing `ProductManagementService` yet by introducing a very specific interface and use __Interface Segregation Principle__ from __SOLID__.
+
+```php
+
+interface ProductProvider
+{
+    function getProductById($id);
+}
+
+class ProductManagementService implements ProductProvider
+{
+    public function getProductById($id) {/* ... */}
+
+    public function synchronizeProducts() {/* ... */}
+
+    public function loadProductsFromExtServer() {/* ... */}
+
+    //  about 8 more functions here
+}
+
+class Cart
+{
+    public function __construct(ProductProvider $productManagementSrvc) 
+    {
+        $this->productProvider = $productProvider;
+    }
+
+    public function addProductById($id, $qty)
+    {
+        $product = $this->productProvider->getProductById($id);
+        //  ... some more code here
+    }
+}
+```
+
+This refatored code restricts `Cart`'s knowledge to the bare minimum by only letting it know that it's receiving a `ProductProvider`.
+
+The major benefit of this is that we can now safely refactor `ProductManagementService` as well by dissecting it in a way __that does not affect the `Cart` class because we are now following the Law of Demeter__. It won't affect the `Cart` class because if we did extract the product loading functionality into a different class, that separate class would just have to implement `ProductProvider` as well and we'll just have to map the interface and implementation in our service providers (more on this later when we look at Laravel's custom container).
+
+This also offers the developers a better view of the client code. If we injected `ProductManagementService` directly, it generates the question "what did we use this dependency for?" and we'll only really know until we've scanned everything that's using the reference. On the otherhand, `ProductProvider` is a more obvious dependency that at _first glance_ we know that we need this dependency becase we need to look up products somewhere in the code.
