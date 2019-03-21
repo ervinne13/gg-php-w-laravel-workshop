@@ -3,6 +3,7 @@
 Pay attention to the instructor as he demonstrate the following concepts in OOP:
 
 - Objects & Classes
+- Abstraction
 - The trinity concepts:
     - Inheritance
     - Polymorphism
