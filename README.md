@@ -94,8 +94,8 @@ If any of the command results in `command not found` or anything similar, please
 //  TODO: add article about class design: designing classes over what they are vs designing classes vs what they do, - composition over inheritance
 
 - 09 [Law of Demeter](/modules/09-lod.md)
-- 10 [SOLID Principles](/modules/10-solid.md)
-- 11 [Introduction to Design Patterns](/modules/10-intro-to-dp.md)
+- 10 [Introduction to Design Patterns](/modules/10-intro-to-dp.md)
+- 11 [SOLID Principles](/modules/11-solid.md)
 
 ### Introduction to Laravel
 
