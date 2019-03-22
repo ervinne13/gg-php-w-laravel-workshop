@@ -1,4 +1,4 @@
- fhi9\-=u7tfrd]0es[# Ground Gurus: PHP Fundamentals with Laravel
+# Ground Gurus: PHP Fundamentals with Laravel
 
 Workshop for teaching PHP from fundamentals going to Laravel development.
 
