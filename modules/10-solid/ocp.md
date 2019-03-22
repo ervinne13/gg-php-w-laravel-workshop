@@ -1,43 +1,4 @@
-# SOLID Principles
-
-SOLID principles is a set of principles/recommendations on how to create better software.
-Note that the instructor wants you to see SOLID as a very good foundation BUT, you should never overuse it like majority of developers do nowadays. They are `recommendations` not absolute rules.
-
-The principles are mental cubby-holes. They give a name to a concept so that you can talk and reason about that concept. They provide a place to hang the feelings we have about good and bad code. They attempt to categorize those feelings into concrete advice.
-
-My last tip would be, always follow and consider KISS (keep it simple stupid) and YAGNI (You aren't gonna need it) first before doing SOLID.
-
-In the next parts of this workshop, we'll look at sample source codes on how to implement SOLID and in some cases, how a certain principle is abused (mostly SRP) and explore alternatives to attempt to make it better.
-
-I'll reiterate the formula:
-
-```
-(YAGNI + KISS) > SOLID
-```
-
-<hr>
-
-## The Principles Explained
-
-- S [Single Responsibility Principle](/modules/11.1-srp.md)
-- O [Open/Closed Principle]()
-- L [Liskov Substitution]()
-- I [Interface Segragation]()
-- D [Dependency Inversion]()
-
-## External References
-
-This workshop is basically a very simplified version of the following references. We  try to immitate real world examples more than what the these references do (which uses Shapes, Animals, geometry or whatever). Reading the following will still help if ever you want to dig in deeper in this principles:
-
-- S [Single Responsibility Principle](https://web.archive.org/web/20150202200348/http://www.objectmentor.com/resources/articles/srp.pdf)
-- O [Open/Closed Principle](https://web.archive.org/web/20150905081105/http://www.objectmentor.com/resources/articles/ocp.pdf)
-- L [Liskov Substitution](https://web.archive.org/web/20150905081111/http://www.objectmentor.com/resources/articles/lsp.pdf)
-- I [Interface Segragation](https://web.archive.org/web/20150905081110/http://www.objectmentor.com/resources/articles/isp.pdf)
-- D [Dependency Inversion](https://web.archive.org/web/20150905081110/http://www.objectmentor.com/resources/articles/isp.pdf)
-
-
-
-## Open/Closed Principle
+# Open/Closed Principle
 
 Robert C. Martin considered this principle as the “the most important principle of object-oriented design”. But he wasn’t the first one who defined it. Bertrand Meyer wrote about it in 1988 in his book [Object-Oriented Software Construction](https://en.wikipedia.org/wiki/Object-Oriented_Software_Construction). He explained the Open/Closed Principle as:
 

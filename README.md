@@ -1,4 +1,4 @@
-# Ground Gurus: PHP Fundamentals with Laravel
+ fhi9\-=u7tfrd]0es[# Ground Gurus: PHP Fundamentals with Laravel
 
 Workshop for teaching PHP from fundamentals going to Laravel development.
 
@@ -91,23 +91,20 @@ If any of the command results in `command not found` or anything similar, please
 
 ### General Software Development Concepts
 
-//  TODO: add article about class design: designing classes over what they are vs designing classes vs what they do, - composition over inheritance
-
-- 09 [Law of Demeter](/modules/09-lod.md)
-- 10 [Introduction to Design Patterns](/modules/10-intro-to-dp.md)
-- 11 [SOLID Principles](/modules/11-solid.md)
+- 09 [Software Development Best Practices & Introduction to Design Patterns](/modules/09-intro-to-dp.md)
+- 10 [SOLID Principles](/modules/10-solid.md)
 
 ### Introduction to Laravel
 
-- 12 [Analyzing Laravel's Design](/modules/12-analyzing-laravel-design.md)
+- 11 [Analyzing Laravel's Design](/modules/11-analyzing-laravel-design.md)
     - Pure & Simple Design
     - Trying to make sense of Taylor Otwell and Jeffrey Way
-- 13 [Quick Walkthrough to the Framework Structure](13-framework-structure.md)
+- 12 [Quick Walkthrough to the Framework Structure](13-framework-structure.md)
 
 ### Breaking Down the Framework
 
-- 14 [Laravel's Custom Container (Modified Container Design Pattern)](/modules/14-laravel-container.md)
-- 15 [Laravel's Managers (Modified Strategy Design Pattern)](/modules/15-laravel-container.md)
+- 13 [Laravel's Custom Container (Modified Container Design Pattern)](/modules/14-laravel-container.md)
+- 14 [Laravel's Managers (Modified Strategy Design Pattern)](/modules/15-laravel-container.md)
 
 ### Exploring the Laravel's Features
 
