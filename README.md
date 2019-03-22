@@ -91,7 +91,7 @@ If any of the command results in `command not found` or anything similar, please
 
 ### General Software Development Concepts
 
-- 09 [Software Development Best Practices & Introduction to Design Patterns](/modules/09-intro-to-dp.md)
+- 09 [Software Development Best Practices & Introduction to Design Patterns](/modules/09-best-practices-and-design-patterns.md)
 - 10 [SOLID Principles](/modules/10-solid.md)
 
 ### Introduction to Laravel
