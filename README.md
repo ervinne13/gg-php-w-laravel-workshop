@@ -94,22 +94,11 @@ If any of the command results in `command not found` or anything similar, please
 - 09 [Software Development Best Practices & Introduction to Design Patterns](/modules/09-best-practices-and-design-patterns.md)
 - 10 [SOLID Principles](/modules/10-solid.md)
 
-### Introduction to Laravel
+### Working with Laravel
 
 - 11 [Analyzing Laravel's Design](/modules/11-analyzing-laravel-design.md)
     - Pure & Simple Design
     - Trying to make sense of Taylor Otwell and Jeffrey Way
-- 12 [Quick Walkthrough to the Framework Structure](13-framework-structure.md)
-
-### Breaking Down the Framework
-
-- 13 [Laravel's Custom Container (Modified Container Design Pattern)](/modules/14-laravel-container.md)
-- 14 [Laravel's Managers (Modified Strategy Design Pattern)](/modules/15-laravel-container.md)
-
-### Exploring the Laravel's Features
-
-- 15 [Ingraining TDD: Laravel's Feature & Unit Tests](/modules/14-laravel-container.md)
-- 16 [Routing & Controllers](/modules/16-routing-controllers.md)
-- 17 [Templating with Blade](/modules/17-blade.md)
-- 18 [Eloquent](/modules/18-eloquent.md)
-- 19 [Authentication Scaffolding](/modules/19-eloquent.md)
+- 12 [Quick Walkthrough to the Framework Structure](/modules/13-framework-structure.md)
+- 13 [Laravel Features Part 1](/modules/13-laravel-features-part-1.md)
+- 14 [Laravel Architecture Concepts](/modules/14-laravel-architecture.md)
