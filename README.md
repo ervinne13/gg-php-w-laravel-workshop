@@ -102,3 +102,4 @@ If any of the command results in `command not found` or anything similar, please
 - 12 [Quick Walkthrough to the Framework Structure](/modules/13-framework-structure.md)
 - 13 [Laravel Features Part 1](/modules/13-laravel-features-part-1.md)
 - 14 [Laravel Architecture Concepts](/modules/14-laravel-architecture.md)
+- 15 [Simple Purchasing App (Project)](/modules/15-purchasing-app.md)
