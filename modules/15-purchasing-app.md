@@ -13,9 +13,9 @@ Requirements:
 
 ## Steps & Features
 
-- [Creating the Purchase Order Form](/15-purchasing-app/01-form.md)
-- [Improving our Tests](/15-purchasing-app/02-improving-tests.md)
-- [Displaying Purchase Orders](/15-purchasing-app/03-displaying-purchase-orders.md)
+- [Creating the Purchase Order Form](/modules/15-purchasing-app/01-form.md)
+- [Improving our Tests](/modules/15-purchasing-app/02-improving-tests.md)
+- [Displaying Purchase Orders](/modules/15-purchasing-app/03-displaying-purchase-orders.md)
 
 ## DIY
 Now that you've done create and viewing of all documents. You'll have to fill in the view of each purchase order, update, and delete.
