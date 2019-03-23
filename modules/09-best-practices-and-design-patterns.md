@@ -2,9 +2,9 @@
 
 ## Universal Best Practices
 
-DRY - Don't Repeat Yourself
-KISS - Keep It Simple (Stupid)
-YAGNI - You Aren't 'Gonna Need It
+- DRY - Don't Repeat Yourself
+- KISS - Keep It Simple (Stupid)
+- YAGNI - You Aren't 'Gonna Need It
 
 ### Principles
 SOLID & STUPID code
