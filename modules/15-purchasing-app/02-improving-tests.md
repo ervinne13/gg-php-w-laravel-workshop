@@ -77,3 +77,5 @@ php artisan dusk
 ```
 
 Browser tests are, however, very slow. This is because Laravel really opens a browser on the background and hosts a server. Things here are really simulated actions that are now very human-like. Writing feature and unit tests will still be valid as you want to be able to run quick tests first, then when you are doing regression, that's when you run browser tests.
+
+WARNING! Since browser tests are really simulated actions, these tests will touch your database. Currently, the only way to work around this is to actually create a separate database and change your setup in .env before and after browser tests.
