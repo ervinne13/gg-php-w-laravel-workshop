@@ -214,6 +214,7 @@ public function store(Request $request)
 ```
 
 Make sure to `use` the `PurchaseOrder` by adding a use statement below your `namespace`;
+You don't have to do this manually though, you may install the "PHP Namespace Resolver" plugin and follow its instructions to manage your namespaces easily.
 
 ```php
 <?php
@@ -237,3 +238,9 @@ Note that if you see more than 1 tests, remove `/tests/Feature/ExampleTest.php` 
 In our advanced classes, we'll be updating our tests to include negative scenarios and apply validations.
 
 Test your real form in the browser and you should be able to see your input in the database.
+
+## Step 7 Avoiding Using the Real Database on Tests
+
+You may run faster tests and without affecting your real database by using an in memory SQLite database instead.
+
+To do this, create first a connection in the file `/config/database.php` and insert an entry in the `connections` array.
