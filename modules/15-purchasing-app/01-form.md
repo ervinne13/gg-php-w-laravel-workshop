@@ -87,6 +87,13 @@ File  `default.blade.php`:
 </html>
 ```
 
+To display this form, let's add it in the `create` method of our controller:
+
+File `app/Http/Controllers/PurchaseOrderController.php` inside the function `create()`:
+```php
+return view('po.form');
+```
+
 Let's remove uneeded scripts (using vue by default) by doing:
 
 ```bash
@@ -244,3 +251,35 @@ Test your real form in the browser and you should be able to see your input in t
 You may run faster tests and without affecting your real database by using an in memory SQLite database instead.
 
 To do this, create first a connection in the file `/config/database.php` and insert an entry in the `connections` array.
+
+```php
+'in_memory_sqlite' => [
+    'driver'   => 'sqlite',
+    'database' => ':memory:',
+    'prefix'   => '',
+],
+```
+
+Then register this connection in your tests by modifying the file `phpunit.xml` and adding an env variable under the `php` tag:
+
+```xml
+<server name="DB_CONNECTION" value="in_memory_sqlite"/>
+```
+
+All in all, the `php` tag should look something like below:
+
+```xml
+<php>
+    <server name="APP_ENV" value="testing"/>
+    <server name="BCRYPT_ROUNDS" value="4"/>
+    <server name="CACHE_DRIVER" value="array"/>
+    <server name="MAIL_DRIVER" value="array"/>
+    <server name="QUEUE_CONNECTION" value="sync"/>
+    <server name="SESSION_DRIVER" value="array"/>
+    <server name="DB_CONNECTION" value="in_memory_sqlite"/>
+</php>
+```
+
+You should be able to get drastically faster tests now. Ex. from 2.5s to 3s testing using mysql to 300ms to 400ms when run with in memory database.
+
+Moreover, any data you had in your database would be unaffected when you're testing.
