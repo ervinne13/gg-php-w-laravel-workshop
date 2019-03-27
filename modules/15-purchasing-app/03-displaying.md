@@ -150,3 +150,71 @@ factory(App\Models\PurchaseOrder::class, 10)->create();
 ```
 
 Check your database and it should now contain 10 (or more if you created more manually).
+
+## Step 2 Create our Test for Viewing Specific Purchase Orders
+
+```php
+/** @test */
+public function it_can_view_created_purchase_orders()
+{
+    $poList = factory(PurchaseOrder::class, 10)->create();
+    
+    $this->browse(function (Browser $browser) use ($poList) {
+        foreach($poList as $po) {
+            $totalCostDisplay = 'P' . number_format($po->total_cost);
+
+            $browser
+                ->visit("/po/{$po->id}")
+                ->assertSee($po->buyer)
+                ->assertSee($po->supplier)
+                ->assertSee($totalCostDisplay)
+                ->assertSee($po->breakdown)
+                ->assertSee($po->purpose);
+        }
+    });        
+}
+```
+
+## Step 3 Creating our Display View
+
+We'll be creating a simple non editable view of the purchase order. In the real world, this is usually the print ready version.
+
+Create new file `/resources/views/po/view.blade.php` with the contents:
+```html
+@extends('layout.default')
+
+@section('content')
+
+<p>
+    <b>Buyer:</b> <label>{{$po->buyer}}</label>
+</p>
+<p>
+    <b>Supplier:</b> <label>{{$po->supplier}}</label>
+</p>
+<p>
+    <b>Total Cost:</b> <label>P{{number_format($po->total_cost)}}</label>
+</p>
+
+<hr />
+
+<b>Breakdown:</b>
+<br />
+{{$po->breakdown}}
+
+<hr />
+
+<b>Purpose:</b>
+<br />
+{{$po->purpose}}
+
+@endsection 
+```
+
+Then in the controller `PurchaseOrderController`, insert the following code inside the `show` method:
+```php
+$po = PurchaseOrder::findOrFail($id);
+return view('po.view', ['po' => $po]);
+```
+
+Now that we're able to display the purchase order, run your tests again to validate that the view is working.
+
