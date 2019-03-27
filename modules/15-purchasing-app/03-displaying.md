@@ -218,3 +218,44 @@ return view('po.view', ['po' => $po]);
 
 Now that we're able to display the purchase order, run your tests again to validate that the view is working.
 
+# Linking Index and Show View
+
+Now let's create a test that if we view the index page and see documents inside it, we should be redirected to the show/view page.
+First let's create our test, add a new function in the `PurchaseOrderBrowserTest`:
+
+```php
+/** @test */
+public function it_redirects_purchase_order_on_clicking_view_on_index()
+{
+    $poList = factory(PurchaseOrder::class, 5)->create();
+
+    $this->browse(function (Browser $browser) use ($poList) {
+        foreach($poList as $po) {
+
+            $actionLinkSelector = "[action='view-po'][data-id='{$po->id}']";
+            $browser
+                ->visit('/po')
+                ->click($actionLinkSelector)
+                ->assertUrlIs(url("/po/{$po->id}"));
+        }
+    });
+}
+```
+
+Now that we have our failing test, let's implement it in our view by editing our index view `/resources/views/po/index.blade.php` and replace the column from:
+
+```html
+<td>View Edit Delete</td>
+```
+
+to
+
+```html
+<td>
+    <a action="view-po" data-id="{{$po->id}}" href="{{route('po.show', $po->id)}}">View</a>
+    Edit 
+    Delete
+</td>
+```
+
+Run the tests and it should now green. Test your progress so far with your browser.
