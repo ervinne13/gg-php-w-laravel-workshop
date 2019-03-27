@@ -136,17 +136,3 @@ $factory->define(PurchaseOrder::class, function (Faker $faker) {
 });
 
 ```
-
-You can test this by using the factory helper method. Let's try it with tinker, fire up your tinker:
-
-```bash
-php artisan tinker
-```
-
-... and inside your tinker, do:
-
-```php
-factory(App\Models\PurchaseOrder::class, 10)->create();
-```
-
-Check your database and it should now contain 10 (or more if you created more manually).
