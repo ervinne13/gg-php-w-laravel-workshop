@@ -26,7 +26,7 @@ To do this, we'll have to parameterize the __action__ and the __method__ and set
     </div>
     <div class="form-group">
         <label>Total Cost</label>
-        <input name="total_cost" value="{{$po->total_cost}}" type="number" class="form-control">        
+        <input name="total_cost" value="{{$po->total_cost}}" type="text" class="form-control">        
     </div>
     <div class="form-group">
         <label>Breakdown</label>
