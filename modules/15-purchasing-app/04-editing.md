@@ -54,7 +54,7 @@ return view('po.form', [
 
 Run your tests again and this time it should go green.
 
-## Create Test for Updating
+## Step 2 Create Test for Updating
 
 In your browser test `PurchaseOrderBrowserTest`, add the test/function:
 
@@ -205,3 +205,50 @@ return redirect()->route('po.index');
 ```
 
 Now run your browser tests again and it should now be green
+
+## Step 3 Implementing Navigation to Edit Form
+
+Let's first establish our test that we need to fulfill
+
+```php
+/** @test */
+public function it_redirects_purchase_order_on_clicking_edit_on_index()
+{
+    $poList = factory(PurchaseOrder::class, 5)->create();
+
+    $this->browse(function (Browser $browser) use ($poList) {
+        foreach($poList as $po) {
+
+            $actionLinkSelector = "[action='edit-po'][data-id='{$po->id}']";
+            $browser
+                ->visit('/po')
+                ->click($actionLinkSelector)
+                ->assertUrlIs(url("/po/{$po->id}/edit"));
+        }
+    });
+}
+```
+
+Now that we have a failing test, we can now go back to our index view `resources/views/po/index.blade.php` and edit the actions/links column.
+
+You will have to refactor:
+
+```php
+<td>
+    <a action="view-po" data-id="{{$po->id}}" href="{{route('po.show', $po->id)}}">View</a>
+    Edit 
+    Delete
+</td>
+```
+
+to:
+
+```php
+<td>
+    <a action="view-po" data-id="{{$po->id}}" href="{{route('po.show', $po->id)}}">View</a>
+    <a action="edit-po" data-id="{{$po->id}}" href="{{route('po.edit', $po->id)}}">Edit</a>
+    Delete
+</td>
+```
+
+Run your tests again and test manually in your browser to see that we're now able to link index and edit pages.
