@@ -20,3 +20,5 @@ Requirements:
 - [Deleting Purchase Orders](/modules/15-purchasing-app/05-deleting.md)
 - [Fixing Our Ugly UI](/modules/15-purchasing-app/06-applying-theme.md)
 - [Authentication Scaffolding](/modules/15-purchasing-app/07-authentication.md)
+- [Applying Validation](/modules/15-purchasing-app/08-validation.md)
+- [Data Tables](/modules/15-purchasing-app/09-datatables.md)
