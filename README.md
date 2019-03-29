@@ -103,3 +103,14 @@ If any of the command results in `command not found` or anything similar, please
 - 13 [Laravel Features Part 1](/modules/13-laravel-features-part-1.md)
 - 14 [Laravel Architecture Concepts](/modules/14-laravel-architecture.md)
 - 15 [Simple Purchasing App (Project)](/modules/15-purchasing-app.md)
+
+### Further discussion:
+
+If we still have time, follow along the instructor as he discuss about:
+
+- How errors are handled in laravel (web & api)
+- Creating your own structured Exception classes
+- Logging & Clockwork
+- Other useful libraries
+- Very quick introduction to jenkins
+    - Integrating Jenkins with Github [Youtube Tutorial](https://www.youtube.com/watch?v=Z3S2gMBUkBo)
