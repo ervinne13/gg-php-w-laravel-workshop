@@ -15,11 +15,8 @@ Requirements:
 
 - [Creating the Purchase Order Form](/modules/15-purchasing-app/01-form.md)
 - [Improving our Tests](/modules/15-purchasing-app/02-improving-tests.md)
-- [Displaying Purchase Orders](/modules/15-purchasing-app/03-displaying-purchase-orders.md)
-
-## DIY
-Now that you've done create and viewing of all documents. You'll have to fill in the view of each purchase order, update, and delete.
-
-Tips:
-- To update, you'll have to change the form method from POST to PUT. You should be able to do this without creating multiple `form.blade.php`.
-- To delete, you'll have to do this in JavaScript. Add your own JavaScript file and do an ajax request with the method DELETE when a "Delete" button is clicked.
+- [Displaying Purchase Orders](/modules/15-purchasing-app/03-displaying.md)
+- [Editing Purchase Orders](/modules/15-purchasing-app/04-editing.md)
+- [Deleting Purchase Orders](/modules/15-purchasing-app/05-deleting.md)
+- [Fixing Our Ugly UI](/modules/15-purchasing-app/06-applying-theme.md)
+- [Authentication Scaffolding](/modules/15-purchasing-app/07-authentication.md)
