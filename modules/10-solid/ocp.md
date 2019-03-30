@@ -87,8 +87,8 @@ class PayrollProcessorContext
 class PayrollProcessingService
 {
     function process(Employee $employee)
-    {
-        $processor = $this->context->getProcessorFor($employee->payrollType);
+    {        
+        $processor = $context->getProcessorFor($employee->payrollType);
         return $processor->process($employee);
     }
 }
