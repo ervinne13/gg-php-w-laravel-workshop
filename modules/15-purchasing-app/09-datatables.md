@@ -115,8 +115,12 @@ Update our view `resources/views/po/index.blade.php` to use Yajra Datatables:
 @section('title', 'Purchase Orders | Listing')
 
 @section('js')
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
-<script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons//1.5.6/css/buttons.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.bootstrap.min.css">
+
+<script src="https://cdn.datatables.net/buttons//1.5.6/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.bootstrap.min.js"></script>
 <script src="/vendor/datatables/buttons.server-side.js"></script>
 {!! $dataTable->scripts() !!}
 
